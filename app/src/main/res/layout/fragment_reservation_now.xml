@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReservationNowFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:id="@+id/now_reservation_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7f7"
+        android:groupIndicator="@null"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/no_data_con"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/thickLineGray"
+        android:visibility="visible">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_data"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20dp"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="아직 예약이 없습니다."
+            android:textColor="@color/subTitleGray"
+            android:textSize="18sp"
+             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="이웃 친구를 찾아 예약하세요."
+            android:textColor="@color/subTitleGray"
+            android:textSize="15sp"
+             />
+    </LinearLayout>
+
+</FrameLayout>

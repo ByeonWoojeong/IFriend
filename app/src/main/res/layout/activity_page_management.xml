@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".PageManagementActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="페이지 관리"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <FrameLayout
+        android:id="@+id/page_setting_con"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="start|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="페이지 설정"
+            android:textColor="@color/infoTextGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/page_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="end|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            tools:text="미등록"
+            android:textColor="@color/starOnRed"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <FrameLayout
+        android:id="@+id/insert_photo_con"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="start|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="사진 등록"
+            android:textColor="@color/infoTextGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/insert_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="end|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            tools:text="미등록"
+            android:textColor="@color/starOnRed"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <FrameLayout
+        android:id="@+id/introduce_con"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="start|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="자기 소개"
+            android:textColor="@color/infoTextGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="end|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            tools:text="미등록"
+            android:textColor="@color/starOnRed"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <FrameLayout
+        android:id="@+id/career_con"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="start|center_vertical"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="경력 사항"
+            android:textColor="@color/infoTextGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/career"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="end|center_vertical"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            tools:text="관리자 입력"
+            android:textColor="@color/starOnRed"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <FrameLayout
+        android:id="@+id/available_services_con"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="start|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="이용 가능 서비스"
+            android:textColor="@color/infoTextGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/available_services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="end|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            tools:text="미등록"
+            android:textColor="@color/starOnRed"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <FrameLayout
+        android:id="@+id/care_environment_con"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="start|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="돌봄 환경"
+            android:textColor="@color/infoTextGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/care_environment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="end|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            tools:text="미등록"
+            android:textColor="@color/starOnRed"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <FrameLayout
+        android:id="@+id/cost_con"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="start|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="이용 비용"
+            android:textColor="@color/infoTextGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="end|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            tools:text="미등록"
+            android:textColor="@color/starOnRed"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <FrameLayout
+        android:id="@+id/rules_con"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="start|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="이용 규칙"
+            android:textColor="@color/infoTextGray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/rules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="end|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            tools:text="미등록"
+            android:textColor="@color/starOnRed"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+</LinearLayout>

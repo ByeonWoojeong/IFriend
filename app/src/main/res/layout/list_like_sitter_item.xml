@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <com.smarteist.autoimageslider.SliderLayout
+                android:id="@+id/main_home_slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/sitter_info_con"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/sitter_photo_con"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/sitter_photo"
+                    android:layout_width="49dp"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="18dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/sitter_introduce_con"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="이웃친구"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/sitter_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp"
+                        tools:text="변우정" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/sitter_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="13sp"
+                    tools:text="서울시 구로구 구로동" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/like_con"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <CheckBox
+                    android:id="@+id/like"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:button="@drawable/like"
+                    android:focusable="false"
+                    android:checked="true"
+                    />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sitter_info_con2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rating_bar"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_width="90dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="18dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/review_average"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:textColor="@color/subTitleGray"
+                        android:textSize="11sp"
+                        tools:text="4.5" />
+
+                    <TextView
+                        android:id="@+id/review_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:textColor="@color/subTitleGray"
+                        android:textSize="11sp"
+                        tools:text="13" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

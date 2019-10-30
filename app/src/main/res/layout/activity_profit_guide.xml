@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".ProfitGuideActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="수익금 정산 안내"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="수익금 수령 방법"
+                    android:textColor="@color/titleBarTextGray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="20dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="수익금 지급을 위해서 수령계좌를 설정해주셔야 합니다. 수익금은 매주 수요일마다 수령된 계좌를 통해 지난 일주일간의 활동에 대한 금액이 입금됩니다."
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/enter_receipt_account_back"
+
+                    android:text="수령 계좌 입력"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="15sp" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/thickLineGray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="정산 상태"
+                    android:textColor="@color/titleBarTextGray"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/calculate_waiting" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="서비스 완료 48시간 이후 정산 처리"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/non_calculate" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="서비스 완료 48시간 이내에 문제 발견 시"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/deposit_waiting" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="정산 완료 후 입금일(수요일)까지의 상태"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/deposit_completed" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="회원님의 계좌로 수익금 입금 완료"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="수익금 수령 방법"
+                    android:textColor="@color/titleBarTextGray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="이용 완료 후 의뢰 비용의 15%를 차감한 금액과 차감한 금액의 3.3%에 대한 세금 원천 징수를 제외한 나머지 금액을 수입금으로 청산합니다.\n(이용 완료 후 48시간 이후에 수익금 정산)"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

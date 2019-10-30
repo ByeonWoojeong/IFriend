@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".CancelReasonActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="취소 사유"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:id="@+id/profile_con"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/photo"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="100dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp"
+                    tools:text="변우정" />
+
+                <ImageView
+                    android:id="@+id/more"
+                    android:layout_width="18dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/right_arrow" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/viewLineGray" />
+
+            <LinearLayout
+                android:id="@+id/date_time_con"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="날짜"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        tools:text="10월 29일" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="시간"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        tools:text="1:00 PM" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/about_pay"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/thickLineGray"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="총 시간"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/total_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp"
+                        tools:text="5" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="인원"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/total_people"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginRight="35dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp"
+                        tools:text="2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="명"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/viewLineGray" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="결제 금액"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/total_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp"
+                        tools:text="200,000" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/about_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/thickLineGray"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="취소 시간"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/cancel_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp"
+                        tools:text="13:33" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="취소 사유"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/cancel_reason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp"
+                        tools:text="기타" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/etc_detail_con"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="취소 사유"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/etc_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp"
+                    tools:text="" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".IntoChildProfileActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="우리 아이 프로필"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+           <ImageView
+               android:id="@+id/photo"
+               android:layout_width="match_parent"
+               android:layout_height="190dp" />
+
+
+            <LinearLayout
+                android:id="@+id/basics_con"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="기본 사항"
+                    android:textColor="@color/titleBarTextGray"
+                    android:textSize="15sp" />
+
+                <FrameLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="이름"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="출생 순위"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/ranking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="출생 년도"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/birth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="성별"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="20dp"
+                android:background="@color/viewLineGray" />
+
+            <LinearLayout
+                android:id="@+id/basics2_con"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <FrameLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="교육 기관 명"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/agency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </FrameLayout>
+                <FrameLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="배상 책임 보험 가입"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/insurance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </FrameLayout>
+                <FrameLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="아이 관심 대상"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/interest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/character_con"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="성향 및 성격"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="Q. 일반적인 놀이 성향은?"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="A."
+                        android:textColor="@color/titleBarTextGray"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/answer1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textColor="@color/titleBarTextGray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="Q. 또래 아이들과의 관계는?"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="A."
+                        android:textColor="@color/titleBarTextGray"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/answer2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textColor="@color/titleBarTextGray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="Q. 활동 성향은?"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/answer3_con"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:id="@+id/answer3_1_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="A."
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/answer3_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/answer3_2_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="A."
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/answer3_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/answer3_3_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="A."
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/answer3_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/answer3_4_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="A."
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/answer3_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/answer3_5_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="A."
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/answer3_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/answer3_6_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="A."
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/answer3_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/answer3_7_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="A."
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/answer3_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/answer3_8_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="A."
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/answer3_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="Q. 가족 안에서의 성향은?"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/answer4_con"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/answer4_1_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="A."
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/answer4_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/answer4_2_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="A."
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/answer4_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/answer4_3_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="A."
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/answer4_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/answer4_4_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="A."
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/answer4_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/titleBarTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/careful_con"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="주의가 필요한 건강 사항"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/careful"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text=""
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/etc_con"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35dp"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="기타 참고 사항"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/etc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text=""
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </LinearLayout></ScrollView>
+</LinearLayout>

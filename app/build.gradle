@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    repositories {
+        mavenCentral()
+        maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
+    }
+    defaultConfig {
+        applicationId "com.woojeong.global.ifriend"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 24
+        versionName "1.3.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //Google Map
+    implementation 'com.google.android.gms:play-services-maps:11.0.0'
+    implementation 'com.google.android.gms:play-services-location:11.0.0'
+    implementation 'com.firebase:geofire-android:2.1.1'
+
+    //AQuery
+    implementation files('libs/android-query-full.0.26.8.jar')
+
+    //FCM
+    implementation 'com.google.firebase:firebase-core:11.0.0'
+    implementation 'com.google.firebase:firebase-messaging:11.0.0'
+
+    //in FirebaseMessagingService
+    implementation 'me.leolin:ShortcutBadger:1.1.16@aar'
+
+    //GPS
+    implementation 'com.google.code.gson:gson:2.7'
+
+    //Kakao
+    implementation 'com.kakao.sdk:kakaolink:1.1.10'
+    implementation 'com.kakao.sdk:kakaotalk:1.1.10'
+    implementation 'com.kakao.sdk:usermgmt:1.1.10'
+
+    //Naver
+    implementation files('libs/naveridlogin_android_sdk_4.2.5.aar')
+    implementation 'com.android.support:support-core-utils:28.0.0'
+    implementation 'com.android.support:customtabs:28.0.0'
+
+
+    //GlobalApplication
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //MarketVersionChecker
+    implementation 'org.jsoup:jsoup:1.8.3'
+
+    //Permission Checker
+    implementation 'gun0912.ted:tedpermission:2.2.2'
+
+    //Photo & Image
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+
+    implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation 'com.github.smarteist:autoimageslider:1.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'    //Glide-Transformations
+    implementation 'jp.co.cyberagent.android:gpuimage:2.0.3'    //GPU Filters
+
+    //Tutorial
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+
+    // Date Picker
+    implementation 'com.github.prolificinteractive:material-calendarview:2.0.0'
+
+    //Rating Bar
+    implementation 'me.zhanghai.android.materialratingbar:library:1.3.2'
+
+    //Sliding Layer
+    implementation 'com.wunderlist:sliding-layer:1.2.5'
+
+    //Floating Button
+    implementation 'com.github.dimorinny:floating-text-button:0.0.4'
+
+    //Chatting
+    implementation('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+    //???
+    implementation 'com.kyleduo.switchbutton:library:1.2.9'
+
+    //animation
+    implementation 'com.github.Yalantis:GuillotineMenu-Android:1.2'
+
+}
+apply plugin: 'com.google.gms.google-services'

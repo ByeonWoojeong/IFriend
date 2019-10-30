@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".InputAccountActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="수령 계좌 입력"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp"
+            />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="50dp"
+        android:background="@color/viewLineGray"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="예금주"
+                        android:textColor="@color/inputGray"
+                        android:textSize="13sp"
+                        />
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="240dp"
+                        android:layout_height="42dp"
+                        android:layout_gravity="end"
+                        android:background="@drawable/border_radius1"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:paddingLeft="10dp"
+                        android:textColorHint="@color/editHintGray"
+                        android:textColor="@color/inputGray"
+                        android:textSize="13sp"
+                        android:hint="예금주 이름"
+                        android:privateImeOptions="defaultInputmode=korean"
+                         />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="은행"
+                        android:textColor="@color/inputGray"
+                        android:textSize="13sp"
+                        />
+                    <EditText
+                        android:id="@+id/bank"
+                        android:layout_width="240dp"
+                        android:layout_height="42dp"
+                        android:layout_gravity="end"
+                        android:background="@drawable/border_radius1"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:paddingLeft="10dp"
+                        android:textColorHint="@color/editHintGray"
+                        android:textColor="@color/inputGray"
+                        android:textSize="13sp"
+                        android:hint="은행 이름"
+                        android:privateImeOptions="defaultInputmode=korean"
+                         />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="계좌 번호"
+                        android:textColor="@color/inputGray"
+                        android:textSize="13sp"
+                        />
+                    <EditText
+                        android:id="@+id/number"
+                        android:layout_width="240dp"
+                        android:layout_height="42dp"
+                        android:layout_gravity="end"
+                        android:background="@drawable/border_radius1"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:paddingLeft="10dp"
+                        android:textColorHint="@color/editHintGray"
+                        android:textColor="@color/inputGray"
+                        android:textSize="13sp"
+                        android:hint="계좌 번호"
+                         />
+                </FrameLayout>
+            </LinearLayout>
+
+
+
+            <FrameLayout
+                android:id="@+id/ok_con"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="100dp"
+                android:background="@color/mainColor"
+                android:layout_gravity="bottom"
+                >
+
+                <TextView
+                    android:id="@+id/ok"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/whiteColor"
+                    android:text="완료"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+
+                    />
+
+            </FrameLayout>
+
+
+
+</FrameLayout>

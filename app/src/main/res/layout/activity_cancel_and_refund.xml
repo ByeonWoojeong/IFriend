@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".CancelAndRefundActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="환불 사유"
+            android:textColor="#5a5a5a"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d9d9" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/refund_rule_con"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="아이친구 서비스 비용을 전액 환불 받으시려면,"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="체크인 시간 기준으로 "
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="5일 전 "
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="까지 예약을 취소하셔야 합니다."
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="체크인 72시간 전"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="5dp"
+                        android:src="@drawable/dotted_line_half" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="예약 금액의 50%"
+                        android:textColor="@color/mainColor"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="체크인 24시간 전"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="5dp"
+                        android:src="@drawable/dotted_line_half" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="예약 금액의 20%"
+                        android:textColor="@color/mainColor"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="체크인 24시간 이내"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="5dp"
+                        android:src="@drawable/dotted_line_half" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="환불 불가"
+                        android:textColor="@color/mainColor"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/thickLineGray" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cancel_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="취소 사유를\n선택해주세요."
+                android:textColor="@color/mainTextGray"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp">
+                    <RadioButton
+                        android:id="@+id/late_radio"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radio_button"
+                        android:text="  늦은 예약 승인 및 메세지 응답"/>
+                    <RadioButton
+                        android:id="@+id/unkind_radio"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/radio_button"
+                        android:text="  이웃 친구의 불친절한 응대"/>
+                    <RadioButton
+                        android:id="@+id/change_radio"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/radio_button"
+                        android:text="  다른 날짜로 예약 변경"/>
+                    <RadioButton
+                        android:id="@+id/personal_radio"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/radio_button"
+                        android:text="  개인적인 사정"/>
+                    <RadioButton
+                        android:id="@+id/etc_radio"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/radio_button"
+                        android:text="  기타"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etc_edit"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:hint="최대 200자까지 작성"
+                android:textColorHint="@color/subTitleGray"
+                android:textColor="@color/infoTextGray"
+                android:background="@drawable/border_radius_edit_disabled"
+                android:textSize="13sp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ok_con"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="190dp"
+        android:background="@color/mainColor"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/ok"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteColor"
+            android:text="환불 신청"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

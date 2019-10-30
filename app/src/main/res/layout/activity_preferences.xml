@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".PreferencesActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="환경 설정"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/push_con"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="start|center_vertical"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="알림 설정"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp" />
+
+            <FrameLayout
+                android:id="@+id/down_con"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end">
+                <ImageView
+                    android:id="@+id/down"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@drawable/spinner_down"
+                    />
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/into_push_con"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/viewLineGray" />
+            <FrameLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="예약 상태 알림"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="14sp"
+                    android:layout_gravity="left|center_vertical"
+
+                    />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/menu1_status_switch"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:textOn="ON"
+                    android:textOff="OFF"
+                    app:switchTextAppearance="@style/BrandedSwitch.text"
+                    app:theme="@style/BrandedSwitch.control"
+                    app:showText="true"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="메세지 알림"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="14sp"
+                    android:layout_gravity="left|center_vertical"
+
+                    />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/menu2_message_switch"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:textOn="ON"
+                    android:textOff="OFF"
+                    app:switchTextAppearance="@style/BrandedSwitch.text"
+                    app:theme="@style/BrandedSwitch.control"
+                    app:showText="true"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="일지 작성 알림"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="14sp"
+                    android:layout_gravity="left|center_vertical"
+
+                    />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/menu3_journal_btn"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:textOn="ON"
+                    android:textOff="OFF"
+                    app:switchTextAppearance="@style/BrandedSwitch.text"
+                    app:theme="@style/BrandedSwitch.control"
+                    app:showText="true"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="광고 수신 동의"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="14sp"
+                    android:layout_gravity="left|center_vertical"
+
+                    />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/menu4_agree_btn"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:textOn="ON"
+                    android:textOff="OFF"
+                    app:switchTextAppearance="@style/BrandedSwitch.text"
+                    app:theme="@style/BrandedSwitch.control"
+                    app:showText="true"
+                    />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/viewLineGray" />
+
+        <FrameLayout
+            android:id="@+id/logout_con"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="start|center_vertical"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="로그아웃"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp"/>
+        </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/viewLineGray" />
+
+        <FrameLayout
+            android:id="@+id/leave_con"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+            <TextView
+                android:id="@+id/leave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="start|center_vertical"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="회원 탈퇴"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp" />
+        </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/viewLineGray" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="start|center_vertical"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="앱 버전 정보"
+                android:textColor="@color/infoTextGray"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="right|center_vertical"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="@string/version_string"
+                android:textColor="@color/infoTextGray"
+                android:textSize="15sp" />
+        </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/viewLineGray" />
+
+    </LinearLayout>
+
+</LinearLayout>

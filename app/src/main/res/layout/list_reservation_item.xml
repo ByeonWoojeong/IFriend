@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/sitter_photo_con"
+            android:layout_width="70dp"
+            android:layout_height="70dp" >
+            <ImageView
+                android:id="@+id/sitter_photo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="18dp"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:maxLines="1"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp"
+                tools:text="김돌봄"
+                 />
+
+            <LinearLayout
+                android:id="@+id/term_con"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/term"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:maxLines="1"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp"
+                    tools:text="12월 15일 ~ 12월 23일"
+                     />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/status_con"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="18dp"
+            android:gravity="end|center_vertical">
+
+            <ImageView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:src="@drawable/waiting_approval"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

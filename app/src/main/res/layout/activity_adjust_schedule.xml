@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".AdjustScheduleActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="스케줄 조정"
+            android:textColor="#5a5a5a"
+            android:textSize="18sp"
+             />
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="완료"
+            android:textColor="@color/starOnRed"
+            android:textSize="16sp"
+            android:layout_marginRight="13dp"
+            />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d9d9"/>
+
+    <LinearLayout
+        android:id="@+id/calendar_con"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="385dp"
+            android:background="#fff"
+            app:mcv_showOtherDates="all"
+            app:mcv_selectionColor="@color/subTitleGray"
+            app:mcv_arrowColor="@color/infoTextGray"
+            app:mcv_selectionMode="multiple"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="불가능한 날짜를 표시해주세요."
+        android:textColor="@color/infoTextGray"
+        android:textSize="15sp"
+        android:layout_marginRight="13dp"
+        />
+
+</LinearLayout>

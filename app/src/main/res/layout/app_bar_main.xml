@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.woojeong.global.ifriend.MainActivity"
+    >
+
+    <include layout="@layout/main_pager" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#c0c0c0"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/main_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+            app:tabSelectedTextColor="#ffffff"
+            style="@style/TabLayout1"
+            app:tabMode="fixed"
+            android:scrollbars="none"
+            android:overScrollMode="never" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

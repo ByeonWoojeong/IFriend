@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/no1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="25dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:maxLines="1"
+            android:textColor="@color/infoTextGray"
+            android:textSize="15sp"
+            tools:text="리스트 아이템"
+             />
+
+    </FrameLayout>
+
+</LinearLayout>

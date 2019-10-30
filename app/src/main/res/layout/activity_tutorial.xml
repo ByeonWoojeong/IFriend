@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".TutorialActivity">
+
+    <android.support.v4.view.ViewPager
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:id="@+id/tutorial_viewpager"
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        android:overScrollMode="never"
+        />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/circle"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|center_horizontal"
+        app:ci_width="-20dp"
+        app:ci_drawable="@drawable/tutorial_select_dot"
+        app:ci_drawable_unselected="@drawable/tutorial_unselect_dot"/>
+
+    <ImageView
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="65dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tutorial_close"
+        android:background="@drawable/tutorial_close"
+        android:visibility="invisible"
+        />
+
+</FrameLayout>

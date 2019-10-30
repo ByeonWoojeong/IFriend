@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="mainColor">#ffcf28</color>
+    <color name="originalColor">#fcf5a4</color>
+    <color name="whiteColor">#ffffff</color>
+    <color name="main2BottomColor">#212121</color>
+
+    <color name="nextOffGray">#f3f3f3</color>
+    <color name="nextOffTextGray">#c1c1c1</color>
+    <color name="impossibleDateGray">#f3f3f3</color>
+    <color name="onGray">#aaaaaa</color>
+    <color name="offGray">#e5e5e5</color>
+    <color name="viewLineGray">#d1d1d1</color>
+    <color name="titleBarTextGray">#313131</color>
+    <color name="inputGray">#313131</color>
+    <color name="mainTextGray">#313131</color>
+    <color name="editHintGray">#b4b4b4</color>
+    <color name="subTitleGray">#b4b4b4</color>
+    <color name="thickLineGray">#f7f7f7</color>
+    <color name="infoTextGray">#787878</color>
+    <color name="commentBackGray">#f1f1f1</color>
+
+    <color name="starOffGray">#ededed </color>
+    <color name="starOnRed">#e45657</color>
+
+
+</resources>

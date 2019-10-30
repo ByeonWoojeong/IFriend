@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".ChoiceFilterActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="필터 선택"
+            android:textColor="#5a5a5a"
+            android:textSize="18sp"
+             />
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="right|center_vertical"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="선택 완료"
+            android:textColor="@color/mainColor"
+            android:textSize="16sp"
+            />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d9d9"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="11sp"
+                android:textColor="@color/subTitleGray"
+                android:text="교육, 테마 프로그램은 준비 중입니다."
+                />
+
+            <LinearLayout
+                android:id="@+id/reset_con"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|end"
+                android:layout_marginRight="20dp">
+                <TextView
+                    android:id="@+id/reset_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="초기화"
+                    android:textColor="#616161"
+                    />
+                <ImageView
+                    android:id="@+id/reset_icon"
+                    android:layout_width="18dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="3dp"
+                    android:src="@drawable/icon_reset"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp">
+
+            <FrameLayout
+                android:id="@+id/consignment_con"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/consignment"
+                    android:layout_width="100dp"
+                    android:layout_height="46dp"
+                    android:text="돌봄 프로그램"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_radius_not_choice"
+                    android:textColor="@color/subTitleGray"
+                    android:textSize="13sp"
+                    />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/education_con"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="false">
+                <TextView
+                    android:id="@+id/education"
+                    android:layout_width="100dp"
+                    android:layout_height="46dp"
+                    android:text="교육 프로그램"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_radius_disabled"
+                    android:textColor="#e1e1e1"
+                    android:textSize="13sp"
+                    android:clickable="false"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/theme_con"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="false">
+                <TextView
+                    android:id="@+id/theme"
+                    android:layout_width="100dp"
+                    android:layout_height="46dp"
+                    android:text="테마 프로그램"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/border_radius_disabled"
+                    android:textColor="#e1e1e1"
+                    android:textSize="13sp"
+                    android:clickable="false"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="#e5e5e5"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="11sp"
+                android:textColor="@color/subTitleGray"
+                android:text="아이의 안심 픽업을 위해 픽업 서비스 시 이웃친구와 사전 미팅을 권장합니다."
+                />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="10dp">
+
+                <FrameLayout
+                    android:id="@+id/long_care_con"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/long_care"
+                        android:layout_width="100dp"
+                        android:layout_height="46dp"
+                        android:text="장기 가능"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_radius_not_choice"
+                        android:textColor="@color/subTitleGray"
+                        android:textSize="13sp"
+                        />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/pick_up_con"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/pick_up"
+                        android:layout_width="100dp"
+                        android:layout_height="46dp"
+                        android:text="픽업 가능"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_radius_not_choice"
+                        android:textColor="@color/subTitleGray"
+                        android:textSize="13sp"
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="#e5e5e5"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이웃 친구 연령"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/subTitleGray"
+                android:textSize="11sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+                <FrameLayout
+                    android:id="@+id/spinner_born1_con"
+                    android:layout_width="140dp"
+                    android:layout_height="46dp">
+                    <com.woojeong.global.ifriend.SpinnerReselect
+                        android:id="@+id/spinner_born1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fff"
+                        android:spinnerMode="dialog"
+                        android:scrollbars="none"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/born_txt1"
+                        android:background="@drawable/border_radius1"
+                        android:paddingLeft="15dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:textColor="#787878"
+                        android:textSize="13sp"
+                        android:text="선택하세요."
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/born_down1"
+                        android:layout_width="10dp"
+                        android:layout_height="7dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_down"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+                <FrameLayout
+                    android:id="@+id/spinner_born2_con"
+                    android:layout_width="140dp"
+                    android:layout_height="46dp">
+                    <com.woojeong.global.ifriend.SpinnerReselect
+                        android:id="@+id/spinner_born2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fff"
+                        android:spinnerMode="dialog"
+                        android:scrollbars="none"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/born_txt2"
+                        android:background="@drawable/border_radius1"
+                        android:paddingLeft="15dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:textColor="#787878"
+                        android:textSize="13sp"
+                        android:text="선택하세요."
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/born_down2"
+                        android:layout_width="10dp"
+                        android:layout_height="7dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_down"/>
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="#e5e5e5"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp">
+
+            <FrameLayout
+                android:id="@+id/boy_con"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/boy"
+                    android:layout_width="100dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_radius_not_choice"
+
+                    android:gravity="center"
+                    android:text="남아"
+                    android:textColor="@color/subTitleGray"
+                    android:textSize="13sp" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/girl_con"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/girl"
+                    android:layout_width="100dp"
+                    android:layout_height="46dp"
+                    android:text="여아"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_radius_not_choice"
+                    android:textColor="@color/subTitleGray"
+                    android:textSize="13sp"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/doesnt_matter_con"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/doesnt_matter"
+                    android:layout_width="100dp"
+                    android:layout_height="46dp"
+                    android:text="상관 없음"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/border_radius_not_choice"
+                    android:textColor="@color/subTitleGray"
+                    android:textSize="13sp"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="#e5e5e5"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp">
+
+            <FrameLayout
+                android:id="@+id/near_con"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/near"
+                    android:layout_width="100dp"
+                    android:layout_height="46dp"
+                    android:text="가까운 순"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_radius_not_choice"
+                    android:textColor="@color/subTitleGray"
+                    android:textSize="13sp"
+                    />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/popular_con"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/popular"
+                    android:layout_width="100dp"
+                    android:layout_height="46dp"
+                    android:text="인기 순"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_radius_not_choice"
+                    android:textColor="@color/subTitleGray"
+                    android:textSize="13sp"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/recommend_con"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/recommend"
+                    android:layout_width="100dp"
+                    android:layout_height="46dp"
+                    android:text="추천 순"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/border_radius_not_choice"
+                    android:textColor="@color/subTitleGray"
+                    android:textSize="13sp"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

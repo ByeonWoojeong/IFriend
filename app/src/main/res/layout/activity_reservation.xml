@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".ReservationActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="예약하기"
+            android:textColor="#5a5a5a"
+            android:textSize="18sp"
+             />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d9d9"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/sitter_info_con"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <FrameLayout
+                    android:id="@+id/sitter_photo_con"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" >
+                    <ImageView
+                        android:id="@+id/sitter_photo"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/sitter_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            tools:text="이름"
+                            android:textColor="@color/mainTextGray"
+                            android:textSize="15sp"
+                            android:layout_marginRight="13dp"
+                            />
+                        <TextView
+                            android:id="@+id/sitter_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            tools:text="나이"
+                            android:textColor="@color/infoTextGray"
+                            android:textSize="15sp"
+                            android:layout_marginRight="7dp"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/sitter_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        android:layout_marginRight="7dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/viewLineGray"/>
+
+            <LinearLayout
+                android:id="@+id/date_choice_con"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:text="날짜 선택"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18dp"
+                            android:text="시작일"
+                            android:textSize="11sp"
+                            android:textColor="@color/subTitleGray"
+                            />
+
+                        <FrameLayout
+                            android:id="@+id/start_date_con"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp">
+
+                            <TextView
+                                android:id="@+id/start_date"
+                                android:background="@drawable/border_radius1"
+                                android:paddingLeft="15dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|left"
+                                android:textColor="#787878"
+                                android:textSize="13sp"
+                                android:text=""
+
+                                />
+
+                            <ImageView
+                                android:id="@+id/start_date_down"
+                                android:layout_width="10dp"
+                                android:layout_height="7dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="7dp"
+                                android:src="@drawable/spinner_down"/>
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/offGray"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="15dp"
+                        android:text="ㅡ"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="종료일"
+                            android:textSize="11sp"
+                            android:textColor="@color/subTitleGray"
+                            />
+
+                        <FrameLayout
+                            android:id="@+id/finish_date_con"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp">
+
+                            <TextView
+                                android:id="@+id/finish_date"
+                                android:background="@drawable/border_radius1"
+                                android:paddingLeft="15dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="#787878"
+                                android:textSize="13sp"
+                                android:text=""
+                                android:gravity="center_vertical|left"
+
+                                />
+
+                            <ImageView
+                                android:id="@+id/finish_date_down"
+                                android:layout_width="10dp"
+                                android:layout_height="7dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="7dp"
+                                android:src="@drawable/spinner_down" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/time_choice_con"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:text="시간 선택"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="예약은 2시간을 기본으로 합니다."
+                        android:textColor="@color/subTitleGray"
+                        android:textSize="11sp"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18dp"
+                            android:text="시작 시간"
+                            android:textSize="11sp"
+                            android:textColor="@color/subTitleGray"
+                            />
+
+                        <FrameLayout
+                            android:id="@+id/start_time_con"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp">
+
+                            <com.woojeong.global.ifriend.SpinnerReselect
+                                android:id="@+id/spinner_start_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#fff"
+                                android:spinnerMode="dialog"
+                                android:scrollbars="none"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                />
+
+                            <TextView
+                                android:id="@+id/start_time"
+                                android:background="@drawable/border_radius1"
+                                android:paddingLeft="15dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|left"
+                                android:textColor="#787878"
+                                android:textSize="13sp"
+                                android:text=""
+
+                                />
+
+                            <ImageView
+                                android:id="@+id/start_time_down"
+                                android:layout_width="10dp"
+                                android:layout_height="7dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="7dp"
+                                android:src="@drawable/spinner_down"/>
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/offGray"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="15dp"
+                        android:text="ㅡ"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="종료 시간"
+                            android:textSize="11sp"
+                            android:textColor="@color/subTitleGray"
+                            />
+
+                        <FrameLayout
+                            android:id="@+id/finish_time_con"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp">
+
+                            <com.woojeong.global.ifriend.SpinnerReselect
+                                android:id="@+id/spinner_finish_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#fff"
+                                android:spinnerMode="dialog"
+                                android:scrollbars="none"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                />
+
+                            <TextView
+                                android:id="@+id/finish_time"
+                                android:background="@drawable/border_radius1"
+                                android:paddingLeft="15dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="#787878"
+                                android:textSize="13sp"
+                                android:text=""
+                                android:gravity="center_vertical|left"
+
+                                />
+
+                            <ImageView
+                                android:id="@+id/finish_time_down"
+                                android:layout_width="10dp"
+                                android:layout_height="7dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="7dp"
+                                android:src="@drawable/spinner_down" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/total_time_con"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="18dp"
+                        android:src="@drawable/icon_total_time"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="총"
+                        android:textSize="12sp"
+                        android:textColor="@color/infoTextGray"
+                        />
+
+                    <TextView
+                        android:id="@+id/total_time_interval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        tools:text="12"
+                        android:textSize="12sp"
+                        android:textColor="@color/mainColor"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="시간"
+                        android:textSize="12sp"
+                        android:textColor="@color/infoTextGray"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/thickLineGray"/>
+
+            <LinearLayout
+                android:id="@+id/child_con"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:text="이웃 친구에게 맡길 자녀"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp"
+                    />
+
+                <ListView
+                    android:id="@+id/child_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:groupIndicator="@null"
+                    android:scrollbars="none"
+                    android:overScrollMode="never" />
+
+                <LinearLayout
+                    android:id="@+id/add_child_con"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="end|center_vertical">
+                    <ImageView
+                        android:id="@+id/add_child_icon"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:src="@drawable/plus"/>
+                    <TextView
+                        android:id="@+id/add_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="18dp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:maxLines="1"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="13sp"
+                        android:text="아이 추가"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="18dp"
+                    android:text="요청 사항"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="18dp"
+                    android:text="예약은 2시간을 기본으로 합니다."
+                    android:textColor="@color/subTitleGray"
+                    android:textSize="11sp"
+                     />
+
+                <EditText
+                    android:id="@+id/request"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginLeft="18dp"
+                    android:padding="10dp"
+                    android:hint="예) 낮잠을 꼭 자야해요.\n 알러지가 있어요."
+                    android:textColorHint="@color/subTitleGray"
+                    android:textColor="@color/infoTextGray"
+                    android:background="@drawable/border_radius_edit"
+                    android:textSize="13sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/calculation_con"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@color/thickLineGray">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:text="총 시간"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/total_time"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_marginRight="18dp"
+                        android:text="시간"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:text="우리 아이"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        />
+
+                    <EditText
+                        android:id="@+id/total_children"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_marginRight="18dp"
+                        android:text="명"
+                        android:enabled="false"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp"
+                        android:background="@android:color/transparent"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#d9d9d9"/>
+
+                <LinearLayout
+                    android:id="@+id/total_amount_con"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:text="결제 예정 금액"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/total_amount"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_marginRight="18dp"
+                        android:text="원"
+                        android:textColor="@color/starOnRed"
+                        android:textSize="15sp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/go_reservation_con"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/mainColor"
+        >
+
+        <TextView
+            android:id="@+id/go_reservation"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteColor"
+            android:text="예약하기"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            />
+
+    </FrameLayout>
+
+
+</LinearLayout>

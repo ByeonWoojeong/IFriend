@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/thickLineGray"
+    android:orientation="vertical"
+    tools:context=".TermsListActivity">
+    <FrameLayout
+        android:background="@color/whiteColor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="이용 약관"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <LinearLayout
+        android:id="@+id/terms_of_use"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/whiteColor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="20dp"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="서비스 이용 약관"
+            android:textColor="@color/mainTextGray"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <LinearLayout
+        android:id="@+id/privacy_statement"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/whiteColor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="20dp"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="개인 정보 처리 방침"
+            android:textColor="@color/mainTextGray"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <LinearLayout
+        android:id="@+id/compensation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/whiteColor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="20dp"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="안전 보상 프로그램 약관"
+            android:textColor="@color/mainTextGray"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <LinearLayout
+        android:id="@+id/terms_of_ifriend"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/whiteColor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="20dp"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="이웃 친구 약관"
+            android:textColor="@color/mainTextGray"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+</LinearLayout>

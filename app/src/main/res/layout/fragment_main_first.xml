@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".MainFirstFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:background="#fff"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ss.com.bannerslider.Slider
+                android:id="@+id/adv_slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:slider_animateIndicators="false"
+                app:slider_interval="4000"
+                app:slider_loopSlides="true"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:paddingTop="15dp"
+                android:background="#e0e0e0">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/main_choice_back">
+
+                    <ImageView
+                        android:id="@+id/filter"
+                        android:layout_width="23dp"
+                        android:layout_height="21dp"
+                        android:background="@drawable/btn_filter"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="20dp"/>
+
+                    <ImageView
+                        android:id="@+id/search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="70dp"
+                        android:background="@drawable/btn_search" />
+
+
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/date_con"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp">
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/btn_calender"/>
+
+                            <TextView
+                                android:id="@+id/date_start"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                tools:text="12월 15일"
+                                android:textColor="#313131"
+                                />
+
+                            <TextView
+                                android:id="@+id/hyphen"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text=" ~ "
+                                android:textColor="#313131"
+                                />
+
+                            <TextView
+                                android:id="@+id/date_end"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                tools:text="12월 17일"
+                                android:textColor="#313131"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/location_con"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp">
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/btn_location"/>
+
+                            <TextView
+                                android:id="@+id/location"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                tools:text="서울시 구로구 구로동"
+                                android:textColor="#313131"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/main_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:overScrollMode="never"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:id="@+id/ichingu_info_con"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:background="#e7e7e7"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="(주)드림윌"
+                    android:textSize="10sp"
+                    android:textColor="@color/subTitleGray"
+                    />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="대표자   권오상"
+                        android:textSize="10sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="사업자등록번호   509-86-00457"
+                        android:textSize="10sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="통신판매업신고번호    2019-서울동작-0370"
+                        android:textSize="10sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="주소    서울특별시 동작구 성대로1길 7, 1층"
+                        android:textSize="10sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="대표전화  070-7770-8271"
+                        android:textSize="10sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="개인정보보호책임자    권오상"
+                        android:textSize="10sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="홈페이지  ichingu.com"
+                        android:textSize="10sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="사이트내에서 판매되는 상품에 대하여 배송, 환불, 민원, 이슈 등은\n(주)드림윌에서 처리하며 모든 책임은 (주)​드림윌에 있습니다."
+                        android:textSize="10sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="민원 담당자 연락처 권오상 070-7770-8271"
+                        android:textSize="10sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout></ScrollView>
+
+
+
+</LinearLayout>

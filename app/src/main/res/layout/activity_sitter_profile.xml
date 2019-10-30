@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".SitterProfileActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="이웃 친구 프로필"
+            android:textColor="#5a5a5a"
+            android:textSize="18sp"
+             />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d9d9"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/information1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <FrameLayout
+                    android:id="@+id/sitter_photo_con"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" >
+                    <ImageView
+                        android:id="@+id/sitter_photo"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/sitter_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            tools:text="이름"
+                            android:textColor="@color/mainTextGray"
+                            android:textSize="15sp"
+                            android:layout_marginRight="13dp"
+                            />
+                        <TextView
+                            android:id="@+id/sitter_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            tools:text="나이"
+                            android:textColor="@color/infoTextGray"
+                            android:textSize="15sp"
+                            android:layout_marginRight="7dp"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/sitter_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="7dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        tools:text="서울시 구로구 구로동"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/viewLineGray"/>
+
+            <LinearLayout
+                android:id="@+id/information2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginBottom="7dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="이웃 친구의 자녀"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ListView
+                        android:id="@+id/sitter_child_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:groupIndicator="@null"
+                        android:scrollbars="none"
+                        android:overScrollMode="never" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="30dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="경력 사항"
+                    android:textSize="15sp"
+                    android:textColor="@color/mainTextGray"
+                     />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+                    <ListView
+                        android:id="@+id/career_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:groupIndicator="@null"
+                        android:overScrollMode="never" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/thickLineGray"/>
+
+            <LinearLayout
+                android:id="@+id/information3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="20dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="자기 소개"
+                    android:textSize="15sp"
+                    android:textColor="@color/mainTextGray"
+                     />
+
+                <TextView
+                    android:id="@+id/introduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="7dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    tools:text="자기 소개"
+                    android:textSize="15sp"
+                    android:textColor="@color/subTitleGray"
+                     />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

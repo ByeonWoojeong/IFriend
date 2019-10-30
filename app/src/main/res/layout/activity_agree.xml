@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".AgreeActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="동의 사항"
+            android:textColor="#5a5a5a"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d9d9" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="이웃 친구(돌봄이) 활동 및 오프라인 교육 참석 \n동의 여부입니다. 아래 사항에 모두 동의하셔야\n돌봄 활동이 가능합니다."
+                android:textColor="@color/mainTextGray"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/thickLineGray" />
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="1. 본인 명의 활동 동의"
+            android:textColor="@color/mainTextGray"
+            android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="아이 친구 서비스를 통해 발생하는 수익 배분은 세금 정산 후 이웃 친구(돌봄이) 본인 명의의 계좌로 이체되는 방식으로 진행됩니다. 본인 명의가 아닌 경우 소득 신고가 불가능하므로 세금 정산이 어렵습니다. 타인 명의로 활동하여 생기는 불이익에 대하여 아이 친구는 책임을 지지 않습니다."
+                android:textColor="@color/infoTextGray"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="2. 이웃 친구 환경 검증 동의"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="아이 친구는 서비스 이용을 신청한 돌봄 대상 아이에게 쾌적하고 안전한 돌봄 환경을 제공하기 위하여 이웃 친구의 실 거주지(돌봄 장소)를 직접 방문하여 검증하고 있습니다."
+                android:textColor="@color/infoTextGray"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="3. 신원 확인 및 신분증 복사 동의"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="아이 친구는 이웃 친구(돌봄이)의 신원 검증을 위하여 방문 심사 시 신분증 복사 및 보관을 하고 있습니다. 신분증 사본은 아이친구의 신원 보증 용도로만 보관합니다."
+                android:textColor="@color/infoTextGray"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="4. 오프라인 교육 이수 동의"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="시스템 및 서비스 관련 교육 프로그램 이수 후에 아이 친구 돌봄 활동이 가능합니다."
+                android:textColor="@color/infoTextGray"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="5. 아이 친구 활동에 대한 가족 동의"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="아이 친구 돌봄 활동에 대한 가족 전체 구성원의 동의가 필요합니다. 돌봄 활동 중에 일어날 수 있는 여러 상황에 대해 가족 분들과 함께 의논하신 후 전체 동의를 받으신 분들만 아이친구를 함께 하실 수 있습니다. 서비스 도중 가족 구성원의 미 동의로 인한 돌봄 포기 및 예약 후 취소는 위약금이 발생할 수 있습니다."
+                android:textColor="@color/infoTextGray"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="6. 4명 초과 돌봄 및 중복 돌봄 활동 불가 동의"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="아이 친구는 돌봄이의 자녀를 포함하여 4명 이하 아동 돌봄을 원칙으로 하고 있습니다. 타돌봄 업체 등과의 중복 계약 및 중복 서비스 제공에 대해 엄격히 금하고 있으며, 이와 같은 활동이 발견될 경우 약관에 따라 위약금이 발생할 수 있습니다. 4명 이하 아동 돌봄은 아이들에게 쾌적하고 안전한 환경을 제공하기 위해 아이친구가 정하는 원칙입니다."
+                android:textColor="@color/infoTextGray"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="7. 안전 밀착 이우 친구 동의"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="이웃 친구(돌봄이)는 돌봄 서비스 중 아이들을 방관하지 않고, 적극적으로 쾌적한 돌봄 환경을 제공하며, 아이들간 올바른 관계 형성을 위해 긍정적인 '관심과 돌봄'을 제공할 것을 약속합니다."
+                android:textColor="@color/infoTextGray"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/thickLineGray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="상기 작성된 모든 정보는 사실과 일치함을 확인하였으며, 허위로 기재한 사실이 드러날 경우 회원 자격 박탈 등 아이 친구에서 행하는 조치에 대해 동의합니다."
+                android:textColor="@color/starOnRed"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/check_con"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="35dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/check"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:button="@drawable/agree_checkbox"
+                    android:focusable="false"
+                    android:checked="false"
+                    />
+
+                <TextView
+                    android:id="@+id/check_txt"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/subTitleGray"
+                    android:text="동의합니다."
+                    android:textSize="15sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/submission_con"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@color/mainColor"
+        android:layout_gravity="bottom"
+        >
+
+        <TextView
+            android:id="@+id/submission"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteColor"
+            android:text="제출"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+
+            />
+
+    </FrameLayout>
+
+</LinearLayout>

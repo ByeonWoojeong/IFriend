@@ -1,0 +1,1390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".AboutSitterActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="이웃 친구"
+            android:textColor="#5a5a5a"
+            android:textSize="18sp"
+             />
+
+        <LinearLayout
+            android:id="@+id/like_con"
+            android:orientation="horizontal"
+            android:layout_width="50dp"
+            android:layout_height="46dp"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:layout_marginRight="13dp">
+            <CheckBox
+                android:id="@+id/like"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:button="@drawable/like"
+                android:focusable="false"
+                android:checked="false"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d9d9"/>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.smarteist.autoimageslider.SliderLayout
+                android:id="@+id/home_slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true" />
+
+            <LinearLayout
+                android:id="@+id/sitter_info_con"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.7">
+                    <ImageView
+                        android:id="@+id/sitter_photo"
+                        android:layout_width="49dp"
+                        android:layout_height="49dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_gravity="center_vertical"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6.3"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textSize="15sp"
+                        android:textColor="#313131"
+                         />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text="이웃친구"
+                                android:textSize="13sp"
+                                android:textColor="#787878"
+                                 />
+
+                            <TextView
+                                android:id="@+id/sitter_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text=""
+                                android:textSize="13sp"
+                                android:textColor="#787878"
+                                 />
+
+                            <TextView
+                                android:id="@+id/sitter_age"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text=""
+                                android:textSize="13sp"
+                                android:textColor="#787878"
+                                 />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/sitter_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textSize="13sp"
+                            android:textColor="#787878"
+                             />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/thickLineGray"/>
+
+            <LinearLayout
+                android:id="@+id/certify_total_con"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <LinearLayout
+                    android:id="@+id/identity_verification_con"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/identity_verification_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/identity_verification"/>
+
+                    <TextView
+                        android:id="@+id/identity_verification_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="신원 인증"
+                        android:textSize="13sp"
+                        android:textColor="@color/subTitleGray"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/education_certification_con"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/education_certification_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/education_certification"/>
+
+                    <TextView
+                        android:id="@+id/education_certification_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="교육 인증"
+                        android:textSize="13sp"
+                        android:textColor="@color/subTitleGray"
+                         />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/environmental_certification_con"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/environmental_certification_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/environmental_certification"/>
+
+                    <TextView
+                        android:id="@+id/environmental_certification_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="환경 인증"
+                        android:textSize="13sp"
+                        android:textColor="@color/subTitleGray"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/thickLineGray"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginBottom="7dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="비용"
+                        android:textSize="15sp"
+                        android:textColor="@color/mainTextGray"
+                         />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="평일"
+                            android:textSize="15sp"
+                            android:textColor="@color/infoTextGray"
+                             />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="2dp"
+                            android:src="@drawable/dotted_line1"/>
+
+                        <TextView
+                            android:id="@+id/weekday_price"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textSize="17sp"
+                            android:textColor="@color/mainColor"
+                             />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="공휴일"
+                            android:textSize="15sp"
+                            android:textColor="@color/infoTextGray"
+                             />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="2dp"
+                            android:src="@drawable/dotted_line1"/>
+
+                        <TextView
+                            android:id="@+id/weekend_price"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textSize="17sp"
+                            android:textColor="@color/mainColor"
+                             />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginBottom="7dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="돌봄 가능 조건"
+                        android:textSize="15sp"
+                        android:textColor="@color/mainTextGray"
+                         />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginBottom="7dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="성별"
+                            android:textSize="15sp"
+                            android:textColor="@color/infoTextGray"
+                             />
+                        <TextView
+                            android:id="@+id/care_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="7dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textSize="15sp"
+                            android:textColor="@color/infoTextGray"
+                             />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginBottom="7dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="경력 사항"
+                        android:textSize="15sp"
+                        android:textColor="@color/mainTextGray"
+                         />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
+                        <ListView
+                            android:id="@+id/career_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:groupIndicator="@null"
+                            android:overScrollMode="never" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/thickLineGray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginBottom="7dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="이웃 친구의 자녀"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
+
+                        <ListView
+                            android:id="@+id/sitter_child_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:groupIndicator="@null"
+                            android:overScrollMode="never" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginBottom="7dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="자녀 성격 및 좋아하는 활동"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/sitter_child_character"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginBottom="7dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="돌봄 환경"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginBottom="3dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="거주지 환경"
+                            android:textColor="@color/infoTextGray"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/house_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textColor="@color/infoTextGray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginBottom="3dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="가족 구성원 특징"
+                            android:textColor="@color/infoTextGray"
+                            android:textSize="15sp" />
+
+                        <ListView
+                            android:id="@+id/family_character_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#fff"
+                            android:groupIndicator="@null"
+                            android:overScrollMode="never" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginBottom="3dp"
+
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="가족 구성원 설명"
+                            android:textColor="@color/infoTextGray"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:id="@+id/family_info_con"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="25dp">
+                            <TextView
+                                android:id="@+id/family_explanation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:textColor="@color/infoTextGray"
+                                android:textSize="15sp"
+                                tools:text="부가 설명~" />
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/thickLineGray"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="불가 사항"
+                    android:textSize="15sp"
+                    android:textColor="@color/mainTextGray"
+                     />
+
+                <TextView
+                    android:id="@+id/prohibition_explanation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    tools:text="부가 설명~"
+                    android:textSize="15sp"
+                    android:textColor="@color/infoTextGray"
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="지참 사항"
+                    android:textSize="15sp"
+                    android:textColor="@color/mainTextGray"
+                     />
+
+                <TextView
+                    android:id="@+id/bring_explanation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    tools:text="부가 설명~"
+                    android:textSize="15sp"
+                    android:textColor="@color/infoTextGray"
+                     />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/thickLineGray"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/available_services_con_con"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/available_services_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:id="@+id/available_services"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start|center_vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="18dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="이용 가능 서비스"
+                            android:textSize="15sp"
+                            android:textColor="@color/mainTextGray"
+                             />
+
+                        <FrameLayout
+                            android:id="@+id/service_more_con"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:id="@+id/service_more"
+                                android:layout_width="10dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center_vertical|end"
+                                android:layout_marginRight="18dp"
+                                android:src="@drawable/right_arrow"/>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/available_total_con"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <LinearLayout
+                            android:id="@+id/service1_con"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/service1_icon"
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/medicine_icon"/>
+                            <TextView
+                                android:id="@+id/service1_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text="투약"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="15sp"
+                                android:textColor="@color/infoTextGray"
+                                 />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/service2_con"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/service2_icon"
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/toddlers_care_icon"/>
+                            <TextView
+                                android:id="@+id/service2_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text="영유아 돌봄"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="15sp"
+                                android:textColor="@color/infoTextGray"
+                                 />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/service3_con"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/service3_icon"
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/pick_up_icon"/>
+                            <TextView
+                                android:id="@+id/service3_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text="픽업"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="15sp"
+                                android:textColor="@color/infoTextGray"
+                                 />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginBottom="7dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="가능한 교육 서비스"
+                        android:textSize="15sp"
+                        android:textColor="@color/mainTextGray"
+                         />
+
+                    <TextView
+                        android:id="@+id/available_education_services"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="18dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textSize="15sp"
+                        android:textColor="@color/infoTextGray"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/thickLineGray"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:id="@+id/impossible_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginBottom="15dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        tools:text="예약 가능 일"
+                        android:textSize="15sp"
+                        android:textColor="@color/mainTextGray"
+                         />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="360dp">
+
+                        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/calendar_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            app:mcv_showOtherDates="all"
+                            app:mcv_selectionColor="@color/impossibleDateGray"
+                            app:mcv_selectionMode="none"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginBottom="7dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="방문 선호 시간"
+                        android:textSize="15sp"
+                        android:textColor="@color/mainTextGray"
+                         />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="평일"
+                            android:textSize="15sp"
+                            android:textColor="@color/infoTextGray"
+                             />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/dotted_line_half"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/weekday_start_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text=""
+                                android:textSize="15sp"
+                                android:textColor="@color/infoTextGray"
+                                 />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text=" ~ "
+                                android:textSize="15sp"
+                                android:textColor="@color/infoTextGray"
+                                 />
+                            <TextView
+                                android:id="@+id/weekday_end_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text=""
+                                android:textSize="15sp"
+                                android:textColor="@color/infoTextGray"
+                                 />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text="공휴일"
+                            android:textSize="15sp"
+                            android:textColor="@color/infoTextGray"
+                             />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/dotted_line_half"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/weekend_start_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text=""
+                                android:textSize="15sp"
+                                android:textColor="@color/infoTextGray"
+                                 />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text=" ~ "
+                                android:textSize="15sp"
+                                android:textColor="@color/infoTextGray"
+                                 />
+                            <TextView
+                                android:id="@+id/weekend_end_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:text=""
+                                android:textSize="15sp"
+                                android:textColor="@color/infoTextGray"
+                                 />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="30dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="이웃 친구의 상황에 따라 시간은 변동될 수 있습니다."
+                        android:textSize="13sp"
+                        android:textColor="@color/subTitleGray"
+                         />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginBottom="7dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="이웃 친구의 마음을 느껴보세요."
+                        android:textSize="15sp"
+                        android:textColor="@color/mainTextGray"
+                         />
+
+                    <TextView
+                        android:id="@+id/sitter_mind_explanation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginBottom="20dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textSize="15sp"
+                        android:textColor="@color/infoTextGray"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/thickLineGray"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/review_con"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="이용 후기"
+                        android:textSize="15sp"
+                        android:textColor="@color/mainTextGray"
+                         />
+
+                    <TextView
+                        android:id="@+id/review_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_marginLeft="3dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text=""
+                        android:textSize="15sp"
+                        android:textColor="@color/infoTextGray"
+                         />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end|center_vertical">
+                        <TextView
+                            android:id="@+id/review_average"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:text=""
+                            android:textSize="15sp"
+                            android:textColor="@color/mainTextGray"
+                             />
+                        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                            android:id="@+id/rating_bar"
+                            style="@style/Widget.MaterialRatingBar.RatingBar"
+                            android:layout_width="90dp"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="7dp"
+                            android:isIndicator="true"/>
+                        <FrameLayout
+                            android:id="@+id/review_more_con"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:id="@+id/review_more"
+                                android:layout_width="10dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center_vertical|end"
+                                android:layout_marginRight="18dp"
+                                android:src="@drawable/right_arrow"/>
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/viewLineGray"/>
+
+                <ListView
+                    android:id="@+id/review_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:groupIndicator="@null"
+                    android:divider="@color/viewLineGray"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@color/thickLineGray"/>
+
+                <LinearLayout
+                    android:id="@+id/location_con"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginBottom="10dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="이웃 친구 위치 안내"
+                        android:textSize="15sp"
+                        android:textColor="@color/mainTextGray"
+                         />
+
+                    <TextView
+                        android:id="@+id/location_sitter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginBottom="10dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        tools:text="abc"
+                        android:textSize="13sp"
+                        android:textColor="@color/infoTextGray"
+                         />
+                </LinearLayout>
+
+                <fragment
+                    android:id="@+id/sitter_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="215dp"
+                    android:layout_marginBottom="20dp"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/viewLineGray"/>
+
+                <LinearLayout
+                    android:id="@+id/refund_con"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/refund"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="환불 정책"
+                        android:textSize="15sp"
+                        android:textColor="@color/mainTextGray"
+                         />
+
+                    <FrameLayout
+                        android:id="@+id/refund_more_con"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/refund_more"
+                            android:layout_width="10dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginRight="18dp"
+                            android:src="@drawable/right_arrow"/>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/viewLineGray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="30dp"
+                >
+                
+                <LinearLayout
+                    android:id="@+id/chat_con"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@color/starOnRed">
+
+                    <ImageView
+                        android:id="@+id/chat_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/bubble1"/>
+                    <TextView
+                        android:id="@+id/chat"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/whiteColor"
+                        android:text="대화하기"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_horizontal"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/reservation_con"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@color/mainColor">
+                    <TextView
+                        android:id="@+id/reservation"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/whiteColor"
+                        android:text="예약하기"
+                        android:textSize="15sp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

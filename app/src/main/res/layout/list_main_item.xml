@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+
+            <com.smarteist.autoimageslider.SliderLayout
+                android:id="@+id/main_home_slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <FrameLayout
+                android:id="@+id/sale_con"
+                android:gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/sale_back"
+                android:visibility="visible"
+                android:layout_alignParentRight="true"
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/sale_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="10%"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="할인"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp"
+                        />
+                </LinearLayout>
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/sitter_info_con"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/sitter_photo_con"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+                <ImageView
+                    android:id="@+id/sitter_photo"
+                    android:layout_width="49dp"
+                    android:layout_height="49dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_gravity="center_vertical"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/sitter_introduce_con"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    tools:text="정성을 다해 돌봐요."
+                    android:textSize="15sp"
+                    android:textColor="#313131"
+                     />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="이웃친구"
+                        android:textSize="13sp"
+                        android:textColor="#787878"
+                         />
+
+                    <TextView
+                        android:id="@+id/sitter_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        tools:text="변우정"
+                        android:textSize="13sp"
+                        android:textColor="#787878"
+                         />
+
+                    <TextView
+                        android:id="@+id/sitter_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        tools:text="경기도 군포시 산본동"
+                        android:textSize="13sp"
+                        android:textColor="#787878"
+                         />
+                </LinearLayout>
+
+            </LinearLayout>
+            
+            <FrameLayout
+                android:id="@+id/like_con"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_gravity="center">
+                <CheckBox
+                    android:id="@+id/like"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:button="@drawable/like"
+                    android:focusable="false"
+                    android:checked="false"
+                    />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sitter_info_con2"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rating_bar"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_width="90dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="18dp"
+                    android:isIndicator="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="18dp">
+                    <TextView
+                        android:id="@+id/review_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        tools:text="13"
+                        android:textSize="11sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="18dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="평일"
+                        android:textSize="13sp"
+                        android:textColor="@color/subTitleGray"
+                        android:layout_marginRight="7dp"
+                         />
+
+                    <TextView
+                        android:id="@+id/weekday_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        tools:text="36,000"
+                        android:textColor="#313131"
+                        android:textSize="13sp"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="공휴일"
+                        android:textColor="@color/subTitleGray"
+                        android:textSize="13sp"
+                         />
+
+                    <TextView
+                        android:id="@+id/weekend_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        tools:text="47,000"
+                        android:textColor="#313131"
+                        android:textSize="13sp"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

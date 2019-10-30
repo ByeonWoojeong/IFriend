@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".UseRulesActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="이용 규칙"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="모든 사항은 아이 친구와 조율을 통해 진행합니다."
+                android:textAlignment="center"
+                android:textColor="@color/mainTextGray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="지참 사항"
+                android:textAlignment="center"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/bring_edit"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:hint="예) 기저귀, 간식, 여벌 옷 등"
+                android:textColorHint="@color/subTitleGray"
+                android:textColor="@color/infoTextGray"
+                android:background="@drawable/border_radius_edit"
+                android:textSize="13sp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="불가 사항"
+                android:textAlignment="center"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/impossible_edit"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:hint="예) 현재 병력이 있는 아이"
+                android:textColorHint="@color/subTitleGray"
+                android:textColor="@color/infoTextGray"
+                android:background="@drawable/border_radius_edit"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="방문 선호 시간"
+                android:textAlignment="center"
+                android:textColor="@color/mainTextGray"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="평일"
+                        android:textSize="13sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+
+                    <FrameLayout
+                        android:id="@+id/weekday_start_con"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp">
+
+                        <com.woojeong.global.ifriend.SpinnerReselect
+                            android:id="@+id/spinner_weekday_start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:spinnerMode="dialog"
+                            android:scrollbars="none"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            />
+
+                        <TextView
+                            android:id="@+id/weekday_start_txt"
+                            android:background="@drawable/border_radius1"
+                            android:paddingLeft="15dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:textColor="#787878"
+                            android:textSize="13sp"
+                            android:text=""
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/weekday_start_down"
+                            android:layout_width="10dp"
+                            android:layout_height="7dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="7dp"
+                            android:src="@drawable/spinner_down"/>
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/offGray"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="15dp"
+                    android:text="ㅡ"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text=""
+                        android:textSize="11sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+
+                    <FrameLayout
+                        android:id="@+id/weekday_finish_con"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp">
+
+                        <com.woojeong.global.ifriend.SpinnerReselect
+                            android:id="@+id/spinner_weekday_finish"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:spinnerMode="dialog"
+                            android:scrollbars="none"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            />
+
+                        <TextView
+                            android:id="@+id/weekday_finish_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_radius1"
+
+                            android:gravity="center_vertical|left"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:paddingLeft="15dp"
+                            android:text=""
+                            android:textColor="#787878"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/weekday_finish_down"
+                            android:layout_width="10dp"
+                            android:layout_height="7dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="7dp"
+                            android:src="@drawable/spinner_down" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="주말 및 공휴일"
+                        android:textSize="13sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+
+                    <FrameLayout
+                        android:id="@+id/weekend_start_con"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp">
+
+                        <com.woojeong.global.ifriend.SpinnerReselect
+                            android:id="@+id/spinner_weekend_start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:spinnerMode="dialog"
+                            android:scrollbars="none"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            />
+
+                        <TextView
+                            android:id="@+id/weekend_start_txt"
+                            android:background="@drawable/border_radius1"
+                            android:paddingLeft="15dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:textColor="#787878"
+                            android:textSize="13sp"
+                            android:text=""
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/weekend_start_down"
+                            android:layout_width="10dp"
+                            android:layout_height="7dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="7dp"
+                            android:src="@drawable/spinner_down"/>
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/offGray"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="15dp"
+                    android:text="ㅡ"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text=""
+                        android:textSize="11sp"
+                        android:textColor="@color/subTitleGray"
+                        />
+
+                    <FrameLayout
+                        android:id="@+id/weekend_finish_con"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp">
+
+                        <com.woojeong.global.ifriend.SpinnerReselect
+                            android:id="@+id/spinner_weekend_finish"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:spinnerMode="dialog"
+                            android:scrollbars="none"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            />
+
+                        <TextView
+                            android:id="@+id/weekend_finish_txt"
+                            android:background="@drawable/border_radius1"
+                            android:paddingLeft="15dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="#787878"
+                            android:textSize="13sp"
+                            android:text=""
+                            android:gravity="center_vertical|left"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/weekend_finish_down"
+                            android:layout_width="10dp"
+                            android:layout_height="7dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="7dp"
+                            android:src="@drawable/spinner_down" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="35dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="이웃 친구의 상황에 따라 시간은 변동될 수 있습니다."
+                android:textAlignment="center"
+                android:textColor="@color/subTitleGray"
+                android:textSize="13sp" />
+
+        </LinearLayout></ScrollView>
+
+    <FrameLayout
+        android:id="@+id/ok_con"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_gravity="bottom"
+        android:background="@color/mainColor">
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="완료"
+            android:textColor="@color/whiteColor"
+            android:textSize="15sp" />
+
+    </FrameLayout>
+</LinearLayout>

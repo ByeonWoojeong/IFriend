@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".WriteResume5Activity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="지원서 작성"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="5"
+                android:textColor="@color/mainColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="/5"
+                android:textColor="@color/infoTextGray"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:background="@color/mainColor" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="자기 소개"
+                android:textColor="@color/mainTextGray"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="지원 동기"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/motive_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/border_radius1"
+
+                    android:hint="최대 300자까지"
+                    android:includeFontPadding="false"
+                    android:inputType="none"
+                    android:letterSpacing="-0.05"
+                    android:padding="10dp"
+                    android:textColor="@color/mainTextGray"
+                    android:textColorHint="@color/editHintGray"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="자녀들에게 추구하는 교육 방침"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/pursue_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/border_radius1"
+
+                    android:hint="최대 300자까지"
+                    android:includeFontPadding="false"
+                    android:inputType="none"
+                    android:letterSpacing="-0.05"
+                    android:padding="10dp"
+                    android:textColor="@color/mainTextGray"
+                    android:textColorHint="@color/editHintGray"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="타 가정의 자녀를 돌본 경험"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="타 가정의 자녀를 잠깐이라도 돌보았던 경험이 있다면\n느낀점 등을 구체적으로 적어주세요."
+                    android:textColor="@color/subTitleGray"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/experience_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/border_radius1"
+
+                    android:hint="최대 300자까지"
+                    android:includeFontPadding="false"
+                    android:inputType="none"
+                    android:letterSpacing="-0.05"
+                    android:padding="10dp"
+                    android:textColor="@color/mainTextGray"
+                    android:textColorHint="@color/editHintGray"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="희망 시급"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="평일 희망 시급"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="13sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/border_radius1">
+
+                    <EditText
+                        android:id="@+id/weekday_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="30dp"
+
+                        android:hint=""
+                        android:includeFontPadding="false"
+                        android:inputType="number"
+                        android:letterSpacing="-0.05"
+                        android:singleLine="true"
+                        android:textColor="@color/mainTextGray"
+                        android:textColorHint="@color/editHintGray"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="원"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="13sp" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="공휴일 희망 시급"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="13sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/border_radius1">
+
+                    <EditText
+                        android:id="@+id/weekend_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="30dp"
+
+                        android:hint=""
+                        android:includeFontPadding="false"
+                        android:inputType="number"
+                        android:letterSpacing="-0.05"
+                        android:singleLine="true"
+                        android:textColor="@color/mainTextGray"
+                        android:textColorHint="@color/editHintGray"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="원"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="13sp" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="희망 월 수입"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/border_radius1">
+
+                    <EditText
+                        android:id="@+id/month_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="30dp"
+
+                        android:hint=""
+                        android:includeFontPadding="false"
+                        android:inputType="number"
+                        android:letterSpacing="-0.05"
+                        android:singleLine="true"
+                        android:textColor="@color/mainTextGray"
+                        android:textColorHint="@color/editHintGray"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="원"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="13sp" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="아이 친구를 알게된 배경"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp" />
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp">
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radio_button"
+                        android:text="  지인 추천"
+                        />
+                    <RadioButton
+                        android:id="@+id/radio2"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/radio_button"
+                        android:text="  전단지"
+                        />
+                    <RadioButton
+                        android:id="@+id/radio3"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/radio_button"
+                        android:text="  인터넷검색"
+                        />
+
+                        <RadioButton
+                            android:id="@+id/radio4"
+                            android:textColor="@color/infoTextGray"
+                            android:textSize="15sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radio_button"
+                            android:text="  기타"
+                            />
+                        <EditText
+                            android:id="@+id/etc_check_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/border_radius1"
+
+                            android:hint=""
+                            android:enabled="false"
+                            android:includeFontPadding="false"
+                            android:inputType="none"
+                            android:letterSpacing="-0.05"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/mainTextGray"
+                            android:textColorHint="@color/editHintGray"
+                            android:textSize="15sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/next_con"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/mainColor"
+                android:layout_gravity="bottom"
+                >
+
+                <TextView
+                    android:id="@+id/next"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/whiteColor"
+                    android:text="다음"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

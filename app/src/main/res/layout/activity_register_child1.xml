@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".RegisterChild1Activity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="우리 아이 프로필"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <FrameLayout
+                    android:id="@+id/choice_picture_con"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#f1f1f1"
+                    android:visibility="visible">
+                    <ImageView
+                        android:id="@+id/choice_picture_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/choice_child_picture"/>
+                    <TextView
+                        android:id="@+id/choice_picture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="20dp"
+
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:text="클릭해서 우리 아이 사진을 선택하세요."
+                        android:textColor="@color/subTitleGray"
+                        android:textSize="15sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/picture_con"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <ImageView
+                        android:id="@+id/child_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:id="@+id/delete"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/delete_img"/>
+                </FrameLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="이름"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/border_radius1"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@color/editHintGray"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp"
+                    android:hint="성을 빼고 이름만 입력해주세요."
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="출생 순위"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="13sp" />
+
+                <FrameLayout
+                    android:id="@+id/ranking_spinner_con"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <com.woojeong.global.ifriend.SpinnerReselect
+                        android:id="@+id/ranking_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fff"
+                        android:spinnerMode="dialog"
+                        android:scrollbars="none"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/ranking_txt"
+                        android:background="@drawable/border_radius1"
+                        android:paddingLeft="15dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:textColor="@color/mainTextGray"
+                        android:textSize="15sp"
+                        android:text=""
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/ranking_spinner_down"
+                        android:layout_width="10dp"
+                        android:layout_height="7dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/spinner_down"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:textColor="@color/infoTextGray"
+                    android:text="성별"
+                    android:textSize="13sp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/boy"
+                        android:layout_width="85dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/border_radius1"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/editHintGray"
+                        android:text="남아"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/girl"
+                        android:layout_width="85dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/border_radius1"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/editHintGray"
+                        android:text="여아"
+                        android:textSize="15sp"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:textColor="@color/infoTextGray"
+                    android:text="나이"
+                    android:textSize="13sp"
+                    />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="40dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/born_spinner_con"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp">
+
+                            <com.woojeong.global.ifriend.SpinnerReselect
+                                android:id="@+id/born_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#fff"
+                                android:spinnerMode="dialog"
+                                android:scrollbars="none"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                />
+
+                            <TextView
+                                android:id="@+id/born_txt"
+                                android:background="@drawable/border_radius1"
+                                android:paddingLeft="15dp"
+                                android:includeFontPadding="false"
+                                android:letterSpacing="-0.05"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|left"
+                                android:textColor="@color/mainTextGray"
+                                android:textSize="15sp"
+                                android:text="출생 년도"
+
+                                />
+
+                            <ImageView
+                                android:id="@+id/born_spinner_down"
+                                android:layout_width="10dp"
+                                android:layout_height="7dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="7dp"
+                                android:src="@drawable/spinner_down"/>
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/age_text"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/border_radius1"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:textColor="@color/mainTextGray"
+                            android:text=""
+                            android:textSize="15sp"
+                            android:textAlignment="center"
+                             />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="교육 기관명"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/education_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/border_radius1"
+                    android:inputType="none"
+                    android:singleLine="true"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@color/editHintGray"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp"
+                    android:hint="예) 어린이집, 유치원 등"
+                    android:maxLength="20"
+                     />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:textColor="@color/infoTextGray"
+                android:text="배상 책임 보험 가입 유무"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:textColor="@color/subTitleGray"
+                android:text="자녀 혹은 부모의 배상 책임 보험 가입 유무"
+                android:textSize="13sp"
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/yes"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border_radius1"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/editHintGray"
+                        android:text="유"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/no"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/border_radius1"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/editHintGray"
+                        android:text="무"
+                        android:textSize="15sp"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="아이 관심 대상"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/interest"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/border_radius1"
+                    android:inputType="none"
+                    android:singleLine="true"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@color/editHintGray"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp"
+                    android:hint="예) 동화책, 로봇, 공룡 등"
+                    android:maxLength="20"
+                     />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/next_con"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/mainColor"
+                android:layout_gravity="bottom"
+                >
+
+                <TextView
+                    android:id="@+id/next"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/whiteColor"
+                    android:text="다음"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+
+                    />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

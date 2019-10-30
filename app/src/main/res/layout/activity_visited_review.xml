@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".VisitedReviewActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="아이 방문 후기"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:background="@color/thickLineGray"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff">
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/customer_photo"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="20dp"/>
+                <TextView
+                    android:id="@+id/customer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    tools:text="변우정"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp" />
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rating_bar"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_width="80dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:isIndicator="true" />
+
+                <TextView
+                    android:id="@+id/review_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:gravity="end"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    tools:text="18.10.29"
+                    android:textColor="@color/subTitleGray"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/review_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                tools:text="후기 내용"
+                android:textColor="@color/subTitleGray"
+                android:textSize="15sp" />
+
+
+            <ImageView
+                android:id="@+id/review_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/comment_con"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="visible">
+                <ImageView
+                    android:id="@+id/sitter_photo"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="20dp"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/comment_bubble_tail"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/comment_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="18dp"
+                        android:padding="10dp"
+                        android:background="@drawable/back_radius_comment"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.05"
+                        android:textColor="@color/infoTextGray"
+                        android:textSize="15sp"
+                        tools:text="내용"
+                         />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp">
+                        <TextView
+                            android:id="@+id/comment_delete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:textColor="@color/mainTextGray"
+                            android:textSize="13sp"
+                            android:text="삭제"
+                             />
+                        <TextView
+                            android:id="@+id/comment_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:textColor="@color/subTitleGray"
+                            android:textSize="13sp"
+                            tools:text="18.10.30"
+                             />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout></ScrollView>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+    <LinearLayout
+        android:id="@+id/input_con"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:paddingLeft="20dp"
+
+            android:hint="댓글을 입력하세요."
+            android:imeOptions="actionSearch"
+            android:includeFontPadding="false"
+            android:inputType="none"
+            android:maxLength="300"
+            android:letterSpacing="-0.05"
+            android:padding="@null"
+            android:textAllCaps="false"
+            android:textColor="@color/infoTextGray"
+            android:textColorHint="#cacaca"
+            android:textSize="13sp" />
+
+        <FrameLayout
+            android:id="@+id/ok_con"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:textColor="@color/mainColor"
+                android:textSize="15sp"
+                android:text="확인"
+                 />
+        </FrameLayout>
+
+    </LinearLayout>
+
+        </LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".Main2ThirdFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="대화하기"
+            android:textColor="@color/mainTextGray"
+            android:textSize="18sp"
+             />
+
+        <LinearLayout
+            android:id="@+id/hidden_con"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="end">
+            <TextView
+                android:id="@+id/hidden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="18dp"
+                android:gravity="end"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="숨긴 메세지"
+                android:textColor="@color/mainColor"
+                android:textSize="13sp"
+                 />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d9d9"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/whiteColor">
+        <ImageView
+            android:id="@+id/kakao_btn"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ifriend_kakao"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="궁금하신 내용이 있으면 언제든지 문의주세요."
+            android:textColor="@color/subTitleGray"
+            android:textSize="11sp"
+            />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d9d9"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        >
+        <ListView
+            android:id="@+id/chat_list"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:groupIndicator="@null"
+            android:background="#fff"
+            android:dividerHeight="1px"
+            android:divider="@color/viewLineGray"
+            android:overScrollMode="never"
+            />
+    </FrameLayout>
+
+</LinearLayout>

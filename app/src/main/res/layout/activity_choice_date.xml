@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".ChoiceDateActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="날짜 검색"
+            android:textColor="#5a5a5a"
+            android:textSize="18sp"
+             />
+
+        <ImageView
+            android:id="@+id/reset"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_reset"/>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d9d9"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="날짜, 시간 정보는 초기화 버튼으로 초기화 할 수 있습니다."
+                android:textColor="@color/subTitleGray"
+                android:textSize="11sp"
+                 />
+
+            <LinearLayout
+                android:id="@+id/calendar_con"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/calendar_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="385dp"
+                    android:background="#fff"
+                    app:mcv_showOtherDates="all"
+                    app:mcv_selectionColor="@color/originalColor"
+                    app:mcv_arrowColor="@color/infoTextGray"
+                    app:mcv_selectionMode="range"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#d9d9d9"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="시간 선택"
+                    android:textColor="@color/mainTextGray"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="예약은 2시간을 기본으로 합니다."
+                    android:textColor="@color/subTitleGray"
+                    android:textSize="11sp"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:text="시작"
+                            android:textSize="13sp"
+                            android:textColor="@color/subTitleGray"
+                            />
+
+                    </LinearLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/start_con"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp">
+
+                        <com.woojeong.global.ifriend.SpinnerReselect
+                            android:id="@+id/spinner_start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:spinnerMode="dropdown"
+                            android:scrollbars="none"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            />
+
+                        <TextView
+                            android:id="@+id/start_txt"
+                            android:background="@drawable/border_radius1"
+                            android:paddingLeft="15dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:textColor="#787878"
+                            android:textSize="13sp"
+                            android:text=""
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/start_down"
+                            android:layout_width="10dp"
+                            android:layout_height="7dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="7dp"
+                            android:src="@drawable/spinner_down"/>
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/offGray"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="15dp"
+                    android:text="ㅡ"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="종료"
+                            android:textSize="13sp"
+                            android:textColor="@color/subTitleGray"
+                            />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/finish_con"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp">
+
+                        <com.woojeong.global.ifriend.SpinnerReselect
+                            android:id="@+id/spinner_finish"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:spinnerMode="dropdown"
+                            android:scrollbars="none"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            />
+
+                        <TextView
+                            android:id="@+id/finish_txt"
+                            android:background="@drawable/border_radius1"
+                            android:paddingLeft="15dp"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.05"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="#787878"
+                            android:textSize="13sp"
+                            android:text=""
+                            android:gravity="center_vertical|left"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/finish_down"
+                            android:layout_width="10dp"
+                            android:layout_height="7dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="7dp"
+                            android:src="@drawable/spinner_down" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout></ScrollView>
+
+    <FrameLayout
+        android:id="@+id/ok_con"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@color/mainColor"
+        android:layout_gravity="bottom"
+        >
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteColor"
+            android:text="승인"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+
+            />
+
+    </FrameLayout>
+
+</LinearLayout>

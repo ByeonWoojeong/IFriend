@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".PageSettingActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="페이지 설정"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="교육 프로그램, 테마 프로그램 서비스는 준비중입니다."
+                android:textColor="@color/titleBarTextGray"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="페이지 제목은 15자 이내로 작성 부탁드립니다."
+                android:textColor="@color/titleBarTextGray"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="30dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="페이지 종류"
+                android:textColor="@color/titleBarTextGray"
+                android:textSize="15sp" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp">
+                <RadioButton
+                    android:id="@+id/care_radio"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button"
+                    android:checked="true"
+                    android:text="\u0020\u0020\u0020돌봄 프로그램"/>
+                <RadioButton
+                    android:id="@+id/education_radio"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/radio_button"
+                    android:clickable="false"
+                    android:text="\u0020\u0020\u0020교육 프로그램"/>
+                <RadioButton
+                    android:id="@+id/theme_radio"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/radio_button"
+                    android:clickable="false"
+                    android:text="\u0020\u0020\u0020테마 프로그램"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="페이지 제목"
+                android:textColor="@color/titleBarTextGray"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/page_title"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:background="@drawable/border_radius_edit"
+
+                android:hint="예) 다양한 노하우로 즐겁게"
+                android:imeOptions="actionSearch"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:maxLines="1"
+                android:padding="@null"
+                android:textAllCaps="false"
+                android:textColor="@color/mainTextGray"
+                android:textColorHint="#cacaca"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="end">
+                <TextView
+                    android:id="@+id/letter_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    tools:text="0"
+                    android:textColor="@color/infoTextGray"
+                    android:textSize="13sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.05"
+                    android:text="/15"
+                    android:textColor="@color/subTitleGray"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout></ScrollView>
+
+    <FrameLayout
+        android:id="@+id/ok_con"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@color/mainColor"
+        android:layout_gravity="bottom"
+        >
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteColor"
+            android:text="완료"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+
+            />
+
+    </FrameLayout>
+
+</LinearLayout>

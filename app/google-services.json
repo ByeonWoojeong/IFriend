@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "788202179467",
+    "firebase_url": "https://ifriend-6e5d9.firebaseio.com",
+    "project_id": "ifriend-6e5d9",
+    "storage_bucket": "ifriend-6e5d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788202179467:android:b76179d737b67f4e",
+        "android_client_info": {
+          "package_name": "com.woojeong.global.ifriend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788202179467-b5vq5v12qcft7n3ie882mn07atambsla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyAbNnJ-IUA_b8nMwoL22uXw6Isr1kX-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788202179467-b5vq5v12qcft7n3ie882mn07atambsla.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

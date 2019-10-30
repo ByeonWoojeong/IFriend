@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".RegisterPhotoActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <FrameLayout
+            android:id="@+id/back_con"
+            android:layout_width="45dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="22dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/btn_back" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="사진 등록"
+            android:textColor="@color/titleBarTextGray"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/viewLineGray" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="전체 집 사진, 외부 환경 사진은 관리자가 직접 업로드합니다."
+                android:textColor="@color/mainTextGray"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="자녀와 함께 찍은 사진, 이웃 친구 아이 사진을 올려주세요."
+                android:textColor="@color/mainTextGray"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="* 세로 사진은 확인이 어려우니 가로 사이즈 사진으로 등록해주세요."
+                android:textColor="@color/subTitleGray"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="30dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="자녀와 함께 찍은 사진"
+                android:textColor="@color/titleBarTextGray"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/choice_with_child"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/attach_pictures"/>
+
+                <FrameLayout
+                    android:id="@+id/with_child_con"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="30dp"
+                    android:visibility="gone">
+                    <ImageView
+                        android:id="@+id/with_child_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:id="@+id/with_child_delete"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/delete_img"/>
+                </FrameLayout>
+            </LinearLayout>
+
+
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="45dp"-->
+                <!--android:layout_marginLeft="30dp"-->
+
+                <!--android:includeFontPadding="false"-->
+                <!--android:letterSpacing="-0.05"-->
+                <!--android:text="이웃 친구 아이 사진"-->
+                <!--android:textColor="@color/titleBarTextGray"-->
+                <!--android:textSize="15sp" />-->
+
+        <!--<LinearLayout-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/choice_only_child"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="80dp"-->
+                <!--android:layout_marginTop="7dp"-->
+                <!--android:layout_marginLeft="30dp"-->
+                <!--android:src="@drawable/attach_pictures"/>-->
+
+            <!--<FrameLayout-->
+                <!--android:id="@+id/only_child_con"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="80dp"-->
+                <!--android:layout_marginTop="7dp"-->
+                <!--android:layout_marginLeft="30dp"-->
+                <!--android:visibility="gone">-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/only_child_img"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"/>-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/only_child_delete"-->
+                    <!--android:layout_width="17dp"-->
+                    <!--android:layout_height="17dp"-->
+                    <!--android:layout_gravity="end"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:src="@drawable/delete_img"/>-->
+            <!--</FrameLayout>-->
+
+        <!--</LinearLayout>-->
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/thickLineGray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="전체 집 사진"
+                android:textColor="@color/titleBarTextGray"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="관리자가 직접 업로드합니다."
+                android:textColor="@color/subTitleGray"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/home_img1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/no_img" />
+
+                <ImageView
+                    android:id="@+id/home_img2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/no_img" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="외부 환경 사진"
+                android:textColor="@color/titleBarTextGray"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="관리자가 직접 업로드합니다."
+                android:textColor="@color/subTitleGray"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/outdoor_img1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/no_img" />
+
+                <ImageView
+                    android:id="@+id/outdoor_img2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/no_img" />
+            </LinearLayout>
+        </LinearLayout></ScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/ok_con"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/mainColor"
+        >
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteColor"
+            android:text="다음"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            />
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="264dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_back">
+
+    <LinearLayout
+        android:id="@+id/report_con"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/report"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:textColor="@color/mainTextGray"
+            android:textSize="15sp"
+            android:textAlignment="center"
+
+            android:text="대화 내용 신고하기"
+            />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#efefef"
+        />
+
+    <LinearLayout
+        android:id="@+id/show_n_hide_con"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/show_n_hide"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:textColor="@color/subTitleGray"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:text="대화 내용 숨기기/보이기"
+
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#efefef"
+        />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#efefef"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+
+                android:gravity="center_vertical|center_horizontal"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:textColor="@color/mainColor"
+                android:textSize="15sp"
+                android:text="취소" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

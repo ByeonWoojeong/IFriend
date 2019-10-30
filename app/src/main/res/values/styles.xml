@@ -1,0 +1,84 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/originalColor</item>
+        <item name="colorPrimaryDark">@color/mainColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!--<style name="Base.Widget.Design.TabLayout" parent="android:Widget">-->
+        <!--<item name="tabBackground">@drawable/tab_background</item>-->
+        <!--<item name="tabIndicatorColor">#ffffff</item>-->
+        <!--<item name="tabIndicatorHeight">3dp</item>-->
+        <!--<item name="android:textSize">12sp</item>-->
+    <!--</style>-->
+
+    <style name="Base.Widget.Design.TabLayout2" parent="android:Widget">
+        <item name="tabBackground">@drawable/tab2_background</item>
+        <item name="tabIndicatorColor">@color/mainTextGray</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget"/>
+    <style name="TabLayout1" parent="android:Widget">
+        <item name="tabBackground">@drawable/tab_background</item>
+        <item name="tabIndicatorColor">#ffffff</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="TabLayout2" parent="android:Widget">
+        <item name="tabBackground">@drawable/tab2_background</item>
+        <item name="tabIndicatorColor">@color/mainTextGray</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="DatePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColorPrimary">#a6a6a6</item>
+    </style>
+    <style name="RadioButtonStyle" parent="AppTheme">
+        <item name="colorControlNormal">#a6a6a6</item>
+        <item name="colorAccent">@color/mainColor</item>
+        <item name="android:textColorSecondary">#a6a6a6</item>
+    </style>
+    <style name="RadioButtonStyle2" parent="AppTheme">
+        <item name="colorControlNormal">#a2a2a2</item>
+        <item name="colorAccent">#f92255</item>
+        <item name="android:textColorSecondary">#a2a2a2</item>
+    </style>
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#ed2d4c</item>
+        <item name="colorControlActivated">#ed2d4c</item>
+    </style>
+
+    <style name="TextInputLayout" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">#a7a7a7</item>
+        <item name="android:textSize">14sp</item>
+        <item name="colorAccent">#5a5a5a</item>
+        <item name="colorControlNormal">#a7a7a7</item>
+        <item name="colorControlActivated">#a7a7a7</item>
+    </style>
+
+    <style name="BrandedSwitch.control" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/mainColor</item>
+        <item name="colorSwitchThumbNormal">#5a5a5a</item>
+    </style>
+    <style name="BrandedSwitch.text" parent="Theme.AppCompat.Light">
+    <item name="android:textColor">#ffffff</item>
+    <item name="android:textSize">9dp</item>
+    </style>
+</resources>
